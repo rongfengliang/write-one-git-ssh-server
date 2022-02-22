@@ -27,6 +27,14 @@ cd /opt/gitrepo
 git init --bare demoapp.git
 ```
 
+* chmod (maybe need)
+
+> inside container
+
+```code
+chmod 0755 /opt/gitrepo  /config
+chmod 700 /config/.ssh
+```
 
 * create git repo (local)
 
