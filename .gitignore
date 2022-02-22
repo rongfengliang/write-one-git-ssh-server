@@ -1,1 +1,3 @@
 config
+authorized_keys
+gitrepo

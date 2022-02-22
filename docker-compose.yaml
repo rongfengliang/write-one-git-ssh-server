@@ -1,16 +1,18 @@
 version: '3'
 services:
   ssh:
-    image: linuxserver/openssh-server
+    image: dalongrong/openssh-server
+    build: ./
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Asia/Shanghai
       - SUDO_ACCESS=true #optional
       - PASSWORD_ACCESS=true #optional
-      - USER_PASSWORD=dalongrongdemo #optional
-      - USER_NAME=dalong #optional
+      - USER_PASSWORD=dalongdemo #optional
+      - USER_NAME=git #optional
     volumes:
       - ./config:/config
+      - ./gitrepo:/opt/gitrepo
     ports:
       - "2222:2222"
