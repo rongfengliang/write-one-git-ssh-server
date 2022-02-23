@@ -1,5 +1,11 @@
 version: '3'
 services:
+  githttp:
+   image: dalongrong/git-http
+   volumes:
+    - ./gitrepo:/opt/gitrepo
+   ports:
+   - "8080:8080"
   ssh:
     image: dalongrong/openssh-server
     build: ./
